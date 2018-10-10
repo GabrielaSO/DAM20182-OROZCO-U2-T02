@@ -1,0 +1,39 @@
+<ion-list>
+    <ion-item>
+        <ion-label>Vegetariano</ion-label>
+        <ion-toggle (click)="isClicked(data.myToggle)" [(ngModel)]="data.myToggle"></ion-toggle>
+    </ion-item>
+    <ion-card *ngIf="data.myToggle">
+        <ion-card-header>
+            Ingredientes
+        </ion-card-header>
+        <ion-list>
+            <button ion-item>
+                Champiñones
+            </button>
+            <button ion-item>
+                Piña
+            </button>
+            <button ion-item>
+                Pimientos
+            </button>
+        </ion-list>
+    </ion-card>
+
+    <ion-card *ngIf="!data.myToggle">
+        <ion-card-header>
+            Ingredientes
+        </ion-card-header>
+        <ion-list>
+            <button ion-item>
+                Carne
+            </button>
+            <button ion-item>
+                Pollo
+            </button>
+            <button ion-item>
+                Peperoni
+            </button>
+        </ion-list>
+    </ion-card>
+</ion-list>
